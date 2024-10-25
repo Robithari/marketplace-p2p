@@ -1,0 +1,70 @@
+<!-- public/seller.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace P2P - Penjual</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="buyer.html">Pembeli</a>
+        <a href="seller.html">Penjual</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Form Tambah Produk -->
+    <div class="container">
+        <h2>Tambah Produk Baru</h2>
+        <form id="add-product-form">
+            <label for="title">Judul Produk:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="description">Deskripsi:</label><br>
+            <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+            <label for="price">Harga (Rp):</label><br>
+            <input type="number" id="price" name="price" required><br><br>
+
+            <label for="photo">Foto Produk:</label><br>
+            <input type="url" id="photoUrl" name="photoUrl" required><br><br>
+
+            <label for="latitude">Latitude:</label><br>
+            <input type="number" step="any" id="latitude" name="latitude" required><br><br>
+
+            <label for="longitude">Longitude:</label><br>
+            <input type="number" step="any" id="longitude" name="longitude" required><br><br>
+
+            <label for="slug">Slug:</label><br>
+            <input type="text" id="slug" name="slug" required><br><br>
+
+            <button type="submit" class="button">Tambah Produk</button>
+        </form>
+    </div>
+    <!-- End Form Tambah Produk -->
+
+    <!-- Daftar Produk Penjual -->
+    <div class="container">
+        <h2>Produk Anda</h2>
+        <div id="seller-products-container" class="container">
+            <!-- Produk penjual akan dimuat di sini -->
+        </div>
+    </div>
+    <!-- End Daftar Produk Penjual -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2024 Marketplace P2P. All rights reserved.
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Firebase SDKs -->
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="js/seller.js"></script>
+</body>
+</html>

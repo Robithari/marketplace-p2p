@@ -1,0 +1,91 @@
+<!-- public/admin.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace P2P - Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="buyer.html">Pembeli</a>
+        <a href="seller.html">Penjual</a>
+        <a href="admin.html">Admin</a>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Dashboard Admin -->
+    <div class="container">
+        <h2>Dashboard Admin</h2>
+        
+        <!-- Kelola Halaman -->
+        <div class="admin-section">
+            <h3>Kelola Halaman</h3>
+            <select id="page-select" class="button">
+                <option value="">Pilih Halaman</option>
+                <option value="home">Home</option>
+                <option value="buyer">Pembeli</option>
+                <option value="seller">Penjual</option>
+            </select>
+
+            <div id="edit-form" style="display: none;">
+                <form id="edit-page-form">
+                    <label for="page-title">Judul Halaman:</label><br>
+                    <input type="text" id="page-title" name="page-title" required><br><br>
+
+                    <label for="page-description">Deskripsi:</label><br>
+                    <textarea id="page-description" name="page-description" rows="4" required></textarea><br><br>
+
+                    <label for="page-hero-image">Gambar Hero:</label><br>
+                    <input type="url" id="page-hero-image" name="page-hero-image" required><br><br>
+
+                    <button type="submit" class="button">Simpan Perubahan</button>
+                </form>
+            </div>
+        </div>
+        <!-- End Kelola Halaman -->
+
+        <!-- Data Penjual -->
+        <div class="admin-section">
+            <h3>Data Penjual</h3>
+            <div id="sellers-container">
+                <!-- Data penjual akan dimuat di sini -->
+            </div>
+        </div>
+        <!-- End Data Penjual -->
+
+        <!-- Data Pembeli -->
+        <div class="admin-section">
+            <h3>Data Pembeli</h3>
+            <div id="buyers-container">
+                <!-- Data pembeli akan dimuat di sini -->
+            </div>
+        </div>
+        <!-- End Data Pembeli -->
+
+        <!-- Tagihan Penjual -->
+        <div class="admin-section">
+            <h3>Tagihan Penjual</h3>
+            <div id="billing-container">
+                <!-- Data tagihan akan dimuat di sini -->
+            </div>
+        </div>
+        <!-- End Tagihan Penjual -->
+    </div>
+    <!-- End Dashboard Admin -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2024 Marketplace P2P. All rights reserved.
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Firebase SDKs -->
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
